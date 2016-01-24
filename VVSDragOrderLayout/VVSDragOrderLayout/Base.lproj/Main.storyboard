@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VVSDragOrderLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgF-Jk-Iwq">
+                                <rect key="frame" x="0.0" y="84" width="375" height="375"/>
+                                <color key="backgroundColor" red="0.271922596446663" green="0.26964956982892335" blue="0.47413589015151514" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RgF-Jk-Iwq" secondAttribute="height" multiplier="1:1" id="JeV-Vh-bag"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XcH-UC-Jrf">
+                                <rect key="frame" x="0.0" y="84" width="375" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P1v-1N-Kct">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.061616339616816507" green="0.078486452886572758" blue="0.30644333964646464" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XcH-UC-Jrf" firstAttribute="top" secondItem="RgF-Jk-Iwq" secondAttribute="top" id="1fI-AP-B2N"/>
+                            <constraint firstItem="XcH-UC-Jrf" firstAttribute="leading" secondItem="RgF-Jk-Iwq" secondAttribute="leading" id="EBc-Wy-PZz"/>
+                            <constraint firstItem="RgF-Jk-Iwq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HyM-b9-zHg"/>
+                            <constraint firstItem="XcH-UC-Jrf" firstAttribute="trailing" secondItem="RgF-Jk-Iwq" secondAttribute="trailing" id="UR5-FZ-1Pk"/>
+                            <constraint firstItem="XcH-UC-Jrf" firstAttribute="bottom" secondItem="RgF-Jk-Iwq" secondAttribute="bottom" id="ida-EU-B2K"/>
+                            <constraint firstAttribute="trailing" secondItem="RgF-Jk-Iwq" secondAttribute="trailing" id="iz8-ym-gFA"/>
+                            <constraint firstItem="RgF-Jk-Iwq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="m7K-44-29I"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dragReorderCollectionView" destination="XcH-UC-Jrf" id="gXD-Nu-60r"/>
+                        <outlet property="holderView" destination="RgF-Jk-Iwq" id="SgB-B2-VBj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
